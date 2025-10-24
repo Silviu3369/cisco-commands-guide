@@ -1,0 +1,39 @@
+{
+  "compilerOptions": {
+    "target": "ES2017",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true, // Păstrăm strict mode pentru calitate
+    "forceConsistentCasingInFileNames": true, // Bună practică
+    "noEmit": true, // Next.js se ocupă de emitere
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "bundler", // Recomandat pentru Next.js modern
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve", // Necesar pentru Next.js
+    "incremental": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "baseUrl": ".", // Necesar pentru paths
+    "paths": {
+      "@/*": ["./src/*"] // Permite importuri @/
+    }
+    // Eliminăm "noImplicitAny": false, deoarece "strict": true îl implică deja ca eroare
+  },
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+    // Poți adăuga 'src/**/*.json' dacă vei importa fișiere JSON
+    ],
+  "exclude": [
+    "node_modules"
+    // Poți adăuga alte directoare excluse aici, dacă e cazul
+    ]
+}
