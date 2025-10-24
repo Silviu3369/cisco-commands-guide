@@ -1,0 +1,22 @@
+Dockerfile
+.dockerignore
+node_modules
+npm-debug.log
+README.md
+.next
+.git
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+test
+*.log
+local-*
+# Adaugăm și altele ignorate de git
+.env*
+.vscode
+.idea
+coverage
+build
+out
+db/custom.db*
+prisma/dev.db*
